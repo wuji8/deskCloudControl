@@ -1,0 +1,303 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta charset="utf-8" />
+    <title>登录系统</title>
+
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+    <!-- bootstrap & fontawesome -->
+    <link rel="stylesheet" href="../Plugins/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../Plugins/font-awesome/4.5.0/css/font-awesome.min.css" />
+
+    <!-- page specific plugin styles -->
+    <!-- text fonts -->
+    <link rel="stylesheet" href="../Plugins/css/fonts.googleapis.com.css" />
+
+    <!-- ace styles -->
+    <link rel="stylesheet" href="../Plugins/css/ace.min.css" class="ace-main-stylesheet" id="main-ace-style" />
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="../Plugins/css/ace-part2.min.css" class="ace-main-stylesheet" />
+    <![endif]-->
+    <link rel="stylesheet" href="../Plugins/css/ace-skins.min.css" />
+    <link rel="stylesheet" href="../Plugins/css/ace-rtl.min.css" />
+
+    <!--common css-->
+    <link rel="stylesheet" href="../Content/myStyleSheet.css" />
+
+    <!--[if lte IE 9]>
+      <link rel="stylesheet" href="../Plugins/css/ace-ie.min.css" />
+    <![endif]-->
+    <!-- inline styles related to this page -->
+    <!-- ace settings handler -->
+    <script src="../Plugins/js/ace-extra.min.js"></script>
+
+    <!--[if !IE]> -->
+    <script src="../Plugins/js/jquery-2.1.4.min.js"></script>
+    <!-- <![endif]-->
+    <!--[if IE]>
+    <script src="../Plugins/js/jquery-1.11.3.min.js"></script>
+    <![endif]-->
+    <!-- HTML5shiv and Respond.js for IE8 to support HTML5 elements and media queries -->
+    <!--[if lte IE 8]>
+    <script src="../Plugins/js/html5shiv.min.js"></script>
+    <script src="../Plugins/js/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body class="login-layout">
+    <div class="main-container">
+        <div class="main-content">
+            <div class="row">
+                <div class="col-sm-10 col-sm-offset-1">
+                    <div class="login-container">
+                        <div class="center">
+                            <h1>
+                                <!--<img src="../Images/Logo.png" alt="Logo" />-->
+                                <!--<span class="red">登录</span>-->
+                                <span class="white" id="id-text2"></span>
+                            </h1>
+                            <h4 class="blue" id="id-company-text"></h4>
+                        </div>
+
+                        <div class="space-6"></div>
+
+                        <div class="position-relative">
+                            <div id="login-box" class="login-box visible widget-box no-border">
+                                <div class="widget-body">
+                                    <div class="widget-main">
+                                        <h4 class="header blue lighter bigger">
+                                            <i class="ace-icon fa fa-coffee green"></i>
+                                            请输入您的账户信息
+                                        </h4>
+                                        
+                                        <div class="space-6"></div>
+                                        
+                                        <form>
+                                            <fieldset>
+                                                <label class="block clearfix">
+                                                    <span class="block input-icon input-icon-right">
+                                                        <input type="text" class="form-control" id="username" placeholder="用户名" />
+                                                        <i class="ace-icon fa fa-user"></i>
+                                                    </span>
+                                                </label>
+
+                                                <label class="block clearfix">
+                                                    <span class="block input-icon input-icon-right">
+                                                        <input type="password" class="form-control" id="password" placeholder="密码" />
+                                                        <i class="ace-icon fa fa-lock"></i>
+                                                    </span>
+                                                </label>
+                                               <!--  <div class="form-group">
+                                                    <div id="embed-captcha"></div>
+                                                    <p id="wait" class="show">请输入验证码......</p>
+                                                    <p id="notice" class="hide">请先拖动验证码到相应的位置</p>
+                                                </div> -->
+
+                                                <div class="space text-center" style="overflow: visible;"><p class="tisi" style="margin-bottom: 16px;"></p></div>
+
+                                                <div class="clearfix">
+                                                   <!--  <label class="inline">
+                                                        <input type="checkbox" disabled checked class="ace" />
+                                                        <span class="lbl"> 记住我</span>
+                                                    </label> -->
+
+                                                    <button type="button" class="width-35 pull-right btn btn-sm btn-primary btn-login">
+                                                        <i class="ace-icon fa fa-key"></i>
+                                                        <span class="bigger-110">登录</span>
+                                                    </button>
+                                                </div>
+
+                                                <div class="space-4"></div>
+                                            </fieldset>
+                                        </form>
+
+                                        <div class="space-6"></div>
+                                                                        
+                                        <div class="social-login center">
+                                            <!--<a class="btn btn-primary">
+                                                <i class="ace-icon fa fa-facebook"></i>
+                                            </a>
+
+                                            <a class="btn btn-info">
+                                                <i class="ace-icon fa fa-twitter"></i>
+                                            </a>
+
+                                            <a class="btn btn-danger">
+                                                <i class="ace-icon fa fa-google-plus"></i>
+                                            </a>-->
+                                        </div>
+                                    </div><!-- /.widget-main -->
+
+                                  <!--   <div class="toolbar clearfix">
+                                        <div>
+                                            <a href="/Home/Register/@ViewBag.CUID" class="user-signup-link">
+                                                <i class="ace-icon fa fa-arrow-left"></i>
+                                                进入注册
+                                            </a>
+                                        </div>
+
+                                        <div>
+                                            <a href="#" data-target="#forgot-box" class="forgot-password-link">
+                                                忘记密码
+                                                <i class="ace-icon fa fa-arrow-right"></i>
+                                            </a>
+                                        </div>
+                                    </div> -->
+                                </div><!-- /.widget-body -->
+                            </div><!-- /.login-box -->
+
+                            <div id="forgot-box" class="forgot-box widget-box no-border">
+                                <div class="widget-body">
+                                    <div class="widget-main">
+                                        <h4 class="header red lighter bigger">
+                                            <i class="ace-icon fa fa-key"></i>
+                                            找回密码
+                                        </h4>
+
+                                        <div class="space-6"></div>
+                                        <p>
+                                            输入您的邮箱获取校验信息
+                                        </p>
+
+                                        <form>
+                                            <fieldset>
+                                                <label class="block clearfix">
+                                                    <span class="block input-icon input-icon-right">
+                                                        <input type="email" class="form-control" placeholder="邮箱号" />
+                                                        <i class="ace-icon fa fa-envelope"></i>
+                                                    </span>
+                                                </label>
+
+                                                <div class="clearfix">
+                                                    <button type="button" class="width-35 pull-right btn btn-sm btn-danger">
+                                                        <i class="ace-icon fa fa-lightbulb-o"></i>
+                                                        <span class="bigger-110">发送!</span>
+                                                    </button>
+                                                </div>
+                                            </fieldset>
+                                        </form>
+                                    </div><!-- /.widget-main -->
+
+                                    <div class="toolbar center">
+                                        <a href="#" data-target="#login-box" class="back-to-login-link">
+                                            返回登录
+                                            <i class="ace-icon fa fa-arrow-right"></i>
+                                        </a>
+                                    </div>
+                                </div><!-- /.widget-body -->
+                            </div><!-- /.forgot-box -->
+
+                        </div><!-- /.position-relative -->
+
+                        <div class="navbar-fixed-top align-right">
+                            
+                        </div>
+                    </div>
+                </div><!-- /.col -->
+            </div><!-- /.row -->
+        </div><!-- /.main-content -->
+    </div><!-- /.main-container -->
+    <!-- basic scripts -->
+
+    <!--tips modal-->
+    <div class="modal fade bs-example-modal-sm in" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" id="smallModal">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="mySmallModalLabel">提示</h4>
+                </div>
+                <div class="modal-body">
+                    <p class="tip-content">登录成功，正在为您跳转！</p>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div>
+    <!--/.modal end-->
+
+    <!--auth modal-->
+    <div class="modal fade bs-example-modal-sm in" tabindex="-1" role="dialog" data-backdrop="static" aria-labelledby="authModalLabel" id="authModal">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <!--<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>-->
+                    <h4 class="modal-title" id="authModalLabel">系统公告</h4>
+                </div>
+                <div class="modal-body">
+                    <p class="tip-content">此系统仅限于邀请注册的用户使用！</p>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div>
+    <!--/.modal end-->
+
+    <script type="text/javascript">
+        if ('ontouchstart' in document.documentElement) document.write("<script src='../Plugins/js/jquery.mobile.custom.min.js'>" + "<" + "/script>");
+    </script>
+
+    <!-- inline scripts related to this page -->
+    <script src="../Plugins/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../Scripts/login.js"></script>
+    <!--jiyan-->
+    <script type="text/javascript" src="../Scripts/gt.js"></script>
+    <script type="text/javascript">
+       /*  var cuid = '@ViewBag.CUID';
+        var access = '@ViewBag.Access'; */
+
+       /*  var handlerEmbed = function (captchaObj) {
+            $("#embed-submit").click(function (e) {
+                var validate = captchaObj.getValidate();
+                if (!validate) {
+                    $("#notice")[0].className = "show";
+                    setTimeout(function () {
+                        $("#notice")[0].className = "hide";
+                    }, 2000);
+                    e.preventDefault();
+                }
+            });
+            // 将验证码加到id为captcha的元素里，同时会有三个input的值：geetest_challenge, geetest_validate, geetest_seccode
+            captchaObj.appendTo("#embed-captcha");
+            captchaObj.onReady(function () {
+                $("#wait")[0].className = "hide";
+            });
+            // 更多接口参考：http://www.geetest.com/install/sections/idx-client-sdk.html
+        };
+        $.ajax({
+            // 获取id，challenge，success（是否启用failback）
+            url: "/Home/getcaptcha?t=" + (new Date()).getTime(), // 加随机数防止缓存
+            type: "get",
+            dataType: "json",
+            success: function (data) {
+                // 使用initGeetest接口
+                // 参数1：配置参数
+                // 参数2：回调，回调的第一个参数验证码对象，之后可以使用它做appendTo之类的事件
+                initGeetest({
+                    gt: data.gt,
+                    challenge: data.challenge,
+                    product: "embed", // 产品形式，包括：float，embed，popup。注意只对PC版验证码有效
+                    offline: !data.success, // 表示用户后台检测极验服务器是否宕机，一般不需要关注
+                    new_captcha: data.new_captcha
+                    // 更多配置参数请参见：http://www.geetest.com/install/sections/idx-client-sdk.html#config
+                }, handlerEmbed);
+            }
+        }); */
+
+      /*   //三秒内无法加载验证 重载页面
+        setTimeout(function () {
+            if (!$("#embed-captcha").html()) {
+                console.log(000);
+                window.location.reload();
+            }
+        }, 3000); */
+  
+    </script>
+
+</body>
+</html>
